@@ -26,9 +26,9 @@ import java.util.Set;
 public class IteratorSetMap {
 	
 	
-	public boolean iterateHashSetSearch(Set<String> states, String search) {
+	public boolean iterateHashSetSearch(Set<String> setElements, String search) {
 		boolean result = false;
-		Iterator<String> it = states.iterator();
+		Iterator<String> it = setElements.iterator();
 		while(it.hasNext() ) {
 			if(it.next() == search) {
 				result = true;
