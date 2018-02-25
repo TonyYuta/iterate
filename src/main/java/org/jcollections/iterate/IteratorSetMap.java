@@ -8,7 +8,6 @@
 
 package org.jcollections.iterate;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -26,18 +25,19 @@ import java.util.Set;
  */
 public class IteratorSetMap {
 	
-	Set<String> states;
 	
-	public boolean iterateHashSetSearch(HashSet<String> hs) {
+	public boolean iterateHashSetSearch(Set<String> states, String search) {
 		boolean result = false;
-		Iterator<String> it = hs.iterator();
+		Iterator<String> it = states.iterator();
 		while(it.hasNext() ) {
-			if(it.equals("CA")) {
-				System.out.println("CA");
+			if(it.next() == search) {
 				result = true;
 			}
-			it.next();
 		}
 		return result;
 	}
+	
+	
+	
+	
 }
